@@ -2,7 +2,9 @@
 title: "PA1_template"
 author: "Ian Kim"
 date: "3/26/2017"
-output: html_document
+output: 
+  html_document: 
+    self_contained: no
 ---
 # Reproducible Research Peer-graded Assignment 1
 
