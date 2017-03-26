@@ -20,7 +20,7 @@ total <- aggregate(steps ~ date, data = data, FUN = sum)
 hist(total$steps, xlab = "total steps", main = "Histogram of total steps per day", col = "blue")
 ```
 
-![](PA1_template_files/figure-html/histogram1-1.png)<!-- -->
+![](PA1_template_files/figure-html/Q2-1.histogram1-1.png)<!-- -->
 Task 2 - Report mean and median of the total steps (contained in Summary)
 
 ```r
@@ -40,7 +40,7 @@ avgsteps <- aggregate(steps ~ interval, data = data, FUN = mean, rm.na = TRUE)
 plot(avgsteps, type = "l", main = "Average Daily Activity Pattern", xlab = "time", ylab = "average steps")
 ```
 
-![](PA1_template_files/figure-html/avgsteps_interval-1.png)<!-- -->
+![](PA1_template_files/figure-html/Q3-1.avgsteps_interval-1.png)<!-- -->
 
 Task 2 - Which interval contains the max average stps?
 
@@ -77,7 +77,7 @@ newtotal <- aggregate(steps ~ date, data = newdata, FUN = sum)
 hist(newtotal$steps, xlab = "total steps", main = "Histogram of total steps per day, with missing data imputed", col = "red")
 ```
 
-![](PA1_template_files/figure-html/newdatahiso-1.png)<!-- -->
+![](PA1_template_files/figure-html/Q4-3.newdatahiso-1.png)<!-- -->
 
 
 ```r
@@ -107,4 +107,4 @@ newavgsteps <- aggregate(steps ~ interval + daytype, data = newdata, FUN = "mean
 xyplot(newavgsteps$steps ~ newavgsteps$interval | newavgsteps$daytype, layout = c(1,2), type = "l", xlab = "interval", ylab = "Number of steps")
 ```
 
-![](PA1_template_files/figure-html/weekdays_vs_weekend-1.png)<!-- -->
+![](PA1_template_files/figure-html/Q5-1.weekdays_vs_weekend-1.png)<!-- -->
